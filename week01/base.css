@@ -1,0 +1,110 @@
+body {
+    font-family: "Ubuntu Mono";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    
+}
+
+header {
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    
+    
+    p {
+        width: 400px;
+        line-height: 5em;
+        
+    }
+   
+        img{
+            width: 120px;
+            height: 250px;
+            float: right;
+            margin: 10px;
+            
+            
+            
+        }
+          
+    img.left {
+        width: 120px;
+        height: 200px;
+        float: left;
+        margin: 10px;
+        
+        
+      
+        
+        
+        
+        
+    }
+
+    
+    
+
+
+
+
+
+}
+
+footer {
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+
+.left {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: auto;
+    text-indent: 50px;
+}
