@@ -1,11 +1,12 @@
 body {
-    font-family: "Ubuntu Mono";
+    font-family: "Georgia, seri";
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f4f4f4;
+    
 }
 
 header {
@@ -54,14 +55,14 @@ main {
 
 .card img {
     width: 120px;
-    height: 150px;
+    height: 100px;
     float: right;
     margin: 10px;
 }
 
 .card img.left {
-    width: 120px;
-    height: 200px;
+    max-width: 100px;
+    height: auto;
     float: left;
     margin: 10px;
 }
@@ -82,7 +83,14 @@ footer p {
     background-color: white;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
     overflow: auto;
     text-indent: 50px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
