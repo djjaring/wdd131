@@ -1,6 +1,8 @@
 body {
 
-    font-family: "Georgia, serif", monospace;
+   
+    font-family: 'Ubuntu Mono';
+    font-style: italic;
     margin: 0;
     padding: 0;
     display: flex;
