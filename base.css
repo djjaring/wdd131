@@ -1,8 +1,8 @@
 body {
 
    
-    font-family: 'Ubuntu Mono', monospace;
-    font-style: italic;
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
     margin: 0;
     padding: 0;
     display: flex;
