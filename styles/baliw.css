@@ -53,3 +53,8 @@ h2 {
     display: inline-block;
     margin-right: 0.5rem;
 }
+#place-title::after {
+    content: ' 🏝';
+    display: inline-block;
+    margin-left: 0.5rem;
+}
