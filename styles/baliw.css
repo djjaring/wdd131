@@ -24,7 +24,7 @@ main {
 }
 
 #hero img {
-    width: 100%;
+    width: 60%;
     height: auto;
 }
 
@@ -49,7 +49,7 @@ h2 {
 }
 
 #weather::before {
-    content: '⛅';
+    
     display: inline-block;
     margin-right: 0.5rem;
 }
@@ -58,3 +58,12 @@ h2 {
     display: inline-block;
     margin-left: 0.5rem;
 }
+#weather img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
