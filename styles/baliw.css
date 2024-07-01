@@ -49,6 +49,7 @@ h2 {
 }
 
 #weather::before {
+    content: '🌤';
     
     display: inline-block;
     margin-right: 0.5rem;
