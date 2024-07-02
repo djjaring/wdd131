@@ -86,7 +86,7 @@ footer {
 }
 
 .hamburger {
-    display: none;
+    display: block;
 }
 
 .bar {
@@ -95,7 +95,7 @@ footer {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: #fff;
 }
 
 .nav-menu {
@@ -114,16 +114,13 @@ footer {
     color: white;
 }
 
-.nav-link:focus, .nav-link:active {
-    color: #4357ee;
-}
-
 .nav-logo {
     font-size: 2.1rem;
     font-weight: 500;
     color: white;
 }
-.header{
+
+.header {
     background-color: #333;
     color: white;
 }
