@@ -28,4 +28,6 @@
     .hamburger {
         display: none;
     }
+}.nav-link:hover {
+    color: #4357ee;
 }
