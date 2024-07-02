@@ -114,7 +114,7 @@ footer {
     color: white;
 }
 
-.nav-link:hover {
+.nav-link:focus, .nav-link:active {
     color: #4357ee;
 }
 
