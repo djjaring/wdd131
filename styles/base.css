@@ -1,6 +1,4 @@
-/* =========================
-   RESET & BASE
-   ========================= */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -16,18 +14,16 @@ body {
   line-height: 1.5;
   color: #222;
 
-  /* sticky footer layout */
+ 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* grow main to push footer down */
+
 main { flex: 1; }
 
-/* =========================
-   HEADER
-   ========================= */
+
 .site-header {
   background: #f7f9fb;
   padding: 0;
@@ -46,9 +42,7 @@ main { flex: 1; }
 
 .site-header > h3 #course-title { display: inline-block; }
 
-/* =========================
-   NAVBAR
-   ========================= */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -83,7 +77,7 @@ main { flex: 1; }
 
 .nav-links a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
 
-/* Hamburger (mobile) */
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -112,21 +106,19 @@ main { flex: 1; }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* =========================
-   MAIN — CSS GRID (CENTERED)
-   ========================= */
+
 main {
   display: grid;
-  /* columns grow from 320px up to 420px, then wrap; centered as a group */
+  
   grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
-  justify-content: center;        /* center the track group */
+  justify-content: center;        
   gap: 1.25rem;
   max-width: 1100px;
   margin: 1.25rem auto;
   padding: 0 1rem;
 }
 
-/* Title spans full grid width */
+
 .page-title {
   grid-column: 1 / -1;
   font-size: 1.75rem;
@@ -135,14 +127,13 @@ main {
   margin: 0.5rem 0 1rem;
 }
 
-/* Cards */
 .card {
   background: #fff;
   border: 2px solid var(--bg);
   border-radius: 10px;
   padding: 1rem;
   width: 100%;
-  max-width: 420px;               /* keeps cards from stretching too wide */
+  max-width: 420px;              
 }
 
 .card h2 {
@@ -164,9 +155,7 @@ main {
   margin: 0 auto;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+
 footer {
   background: var(--bg);
   color: #fff;
@@ -178,9 +167,7 @@ footer {
 
 footer p { margin: 0.25rem 0; }
 
-/* =========================
-   RESPONSIVE NAV (MOBILE)
-   ========================= */
+
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
