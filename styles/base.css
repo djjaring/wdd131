@@ -21,7 +21,7 @@ body {
 }
 
 /* Title bar — same width/padding as navbar, full-bleed to outer border */
-.site-header > h1 {
+.site-header > h3 {
   margin: 0;
   text-align: center;
   background: var(--bg);
@@ -30,7 +30,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
 }
-.site-header > h1 #course-title {
+.site-header > h3 #course-title {
   display: inline-block;              /* robust centering for long text */
 }
 
