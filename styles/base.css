@@ -1,15 +1,29 @@
-/* Reset & base */
+/* =========================
+   RESET & BASE
+   ========================= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 :root {
   --bg: #0b4f6c;
   --fg: #ffffff;
   --accent: #ffd166;
 }
+
+html, body { height: 100%; }
+
 body {
   font-family: Inter, Roboto, Ubuntu, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   line-height: 1.5;
   color: #222;
+
+  /* sticky footer layout */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* grow main to push footer down */
+main { flex: 1; }
 
 /* =========================
    HEADER
@@ -19,6 +33,7 @@ body {
   padding: 0;
   border: 2px solid var(--bg);
 }
+
 .site-header > h3 {
   margin: 0;
   text-align: center;
@@ -28,6 +43,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
 .site-header > h3 #course-title { display: inline-block; }
 
 /* =========================
@@ -42,6 +58,7 @@ body {
   padding: 0.75rem 1rem;
   position: relative;
 }
+
 .logo {
   font-weight: 800;
   font-size: 1.125rem;
@@ -49,22 +66,24 @@ body {
   text-decoration: none;
 }
 
-/* Links (desktop) */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
+
 .nav-links a {
   color: var(--fg);
   text-decoration: none;
   font-weight: 500;
   transition: color .25s ease;
 }
+
 .nav-links a:hover { color: var(--accent); }
+
 .nav-links a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
 
-/* Hamburger button */
+/* Hamburger (mobile) */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -73,10 +92,12 @@ body {
   padding: 0.25rem;
   margin-left: auto;
 }
+
 .hamburger:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+
 .hamburger span {
   display: block;
   width: 26px;
@@ -84,73 +105,56 @@ body {
   background: var(--fg);
   transition: transform .25s ease, opacity .25s ease;
 }
+
 .hamburger span + span { margin-top: 5px; }
+
 .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* Responsive menu (mobile) */
-@media (max-width: 768px) {
-  .hamburger { display: block; }
-  .nav-links {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 0; right: 0;
-    background: var(--bg);
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    overflow: hidden;
-    max-height: 0;
-    padding: 0 1rem;
-    transition: max-height .35s ease, padding .25s ease;
-  }
-  .nav-links.open {
-    max-height: 260px;
-    padding: 0.5rem 1rem 0.75rem;
-  }
-  .nav-links li { width: 100%; text-align: center; padding: 0.25rem 0; }
-}
-
 /* =========================
-   MAIN — ✅ CSS GRID
+   MAIN — CSS GRID (CENTERED)
    ========================= */
 main {
-  display: grid; /* <-- rubric satisfied */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: grid;
+  /* columns grow from 320px up to 420px, then wrap; centered as a group */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
+  justify-content: center;        /* center the track group */
   gap: 1.25rem;
   max-width: 1100px;
   margin: 1.25rem auto;
   padding: 0 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-
 }
 
-/* Page title spans full grid */
+/* Title spans full grid width */
 .page-title {
-  grid-column: 1 / -1;      /* spans all columns */
+  grid-column: 1 / -1;
   font-size: 1.75rem;
   font-weight: 700;
   text-align: center;
   margin: 0.5rem 0 1rem;
 }
 
-/* Cards become grid items automatically */
+/* Cards */
 .card {
   background: #fff;
   border: 2px solid var(--bg);
   border-radius: 10px;
   padding: 1rem;
+  width: 100%;
+  max-width: 420px;               /* keeps cards from stretching too wide */
 }
-.card h2 { 
-  margin-bottom: 0.5rem; 
+
+.card h2 {
+  margin-bottom: 0.5rem;
   text-align: center;
   text-decoration-line: underline;
   text-decoration-color: green;
   font-family: "Segoe UI", Arial, sans-serif;
 }
-.card p  { margin-top: 0.5rem; }
+
+.card p { margin-top: 0.5rem; }
+
 .card img {
   width: 100%;
   height: 350px;
@@ -171,13 +175,37 @@ footer {
   border-top: 2px solid var(--bg);
   border-radius: 0 0 10px 10px;
 }
+
 footer p { margin: 0.25rem 0; }
 
-/* Sticky footer pattern */
-html, body { height: 100%; }
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* =========================
+   RESPONSIVE NAV (MOBILE)
+   ========================= */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 1rem;
+    transition: max-height .35s ease, padding .25s ease;
+  }
+
+  .nav-links.open {
+    max-height: 260px;
+    padding: 0.5rem 1rem 0.75rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+  }
 }
-main { flex: 1; }
