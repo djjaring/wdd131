@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 131 Dynamic Web Fundamentals</title>
-  <meta name="description" content="wdd 131 dynamic web fundamental" />
-  <meta name="description" content="Course homepage for WDD 131 Dynamic Web Fundamentals by Dan Jay Jaring. Includes personal profile, hometown information, and useful student links." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
- 
+  <title>WDD 131 – Dynamic Web Fundamentals | Dan Jay Jaring</title>
 
- 
+  <!-- Single, descriptive meta description (≈140 chars) -->
+  <meta name="description" content="Course homepage for WDD 131 – Dynamic Web Fundamentals by Dan Jay Jaring. Includes profile, hometown info, and quick links for students." />
+
+  <!-- Meta author present -->
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Roboto:wght@300..900&family=Ubuntu&display=swap" rel="stylesheet" />
 
- 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css" />
 
-  
+  <!-- JS -->
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-   
-    <h1><span id="course-title">WDD 131 Dynamic Web Fundamentals-DAN JAY JARING</span></h1>
+    <h1><span id="course-title">WDD 131 – Dynamic Web Fundamentals — DAN JAY JARING</span></h1>
 
-    
     <nav class="navbar" aria-label="Primary">
       <a class="logo" href="/">Dan Jay</a>
 
@@ -48,20 +49,20 @@
   </header>
 
   <main>
-    
-    
+    <!-- Page h1 in main per rubric -->
+    <h1 class="page-title">WELCOME TO MY PAGE</h1>
 
-    
     <section class="card">
       <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="Photo of Dan Jay Jaring" width="100" height="100" />
-      <p>Hello! My name is Dan Jay Jaring, and I'm a software development student at BYU-Idaho. I enjoy learning web fundamentals, playing pickleball, and exploring creative tech projects. This section introduces who I am and my goals for WDD 131.</p>
+      <!-- Tip: rename file to a short, semantic name like profile-dan.jpg -->
+      <img src="images/profile.jpg" alt="Photo of Dan Jay Jaring" width="400" height="350" />
+      <p>Hello! My name is Dan Jay Jaring, and I'm a software development student at BYU–Idaho. I enjoy learning web fundamentals, playing pickleball, and exploring creative tech projects. This section introduces who I am and my goals for WDD 131.</p>
     </section>
 
-    
     <section class="card">
       <h2>My Hometown</h2>
-      <img src="images/jax.jpg" alt="Jacksonville, Florida skyline" width="300" height="300" />
+      <!-- Tip: rename long filenames (e.g., jax-skyline.jpg) -->
+      <img src="images/jax.jpg" alt="Jacksonville, Florida skyline" width="400" height="350" />
       <p>I currently live in Jacksonville, Florida — a beautiful city known for its beaches, parks, and great weather. I enjoy spending time outdoors, taking photos, and meeting friends to play pickleball.</p>
     </section>
   </main>
@@ -71,8 +72,8 @@
     <p id="lastModified"></p>
   </footer>
 
-  
   <script>
+    // mobile nav toggle (works without jQuery)
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.getElementById("primary-navigation");
 

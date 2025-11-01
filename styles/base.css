@@ -225,7 +225,7 @@ main > h1 {
 
 footer {
   background: var(--bg);       /* same color as navbar/header */
-  color: var(--fg);            /* readable white text */
+  color: #fff;            /* readable white text */
   text-align: center;          /* center all content */
   padding: 1rem;               /* breathing space */
   border-top: 2px solid var(--bg);
@@ -243,3 +243,11 @@ body {
   flex-direction: column;
 }
 main { flex: 1; }  /* main grows to fill space */
+
+.page-title {
+  grid-column: 1 / -1;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;      /* ✅ Center the heading */
+  margin: 0.5rem 0 1rem;   /* optional spacing */
+}
