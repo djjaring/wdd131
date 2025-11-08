@@ -1,12 +1,22 @@
 /* ============ Reset & tokens ============ */
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+
 :root {
-  --bg: #0b4f6c;
-  --fg: #ffffff;
-  --ink: #1f2937;
-  --muted: #6b7280;
-  --ring: #ffd166;
+  /* brand + base */
+  --bg: #0b4f6c;        /* brand blue (links/active) */
+  --fg: #ffffff;        /* pure white */
+  --ink: #1f2937;       /* body text */
+  --muted: #6b7280;     /* subdued text */
+  --ring: #ffd166;      /* focus ring */
+
+  /* surfaces & utilities */
+  --surface: #f7f9fb;   /* header background */
+  --line: #e5edf3;      /* borders / separators */
+  --title: #0b2540;     /* dark blue headings */
+  --hover: #f1f5f9;     /* hover background */
+  --card: #ffffff;      /* cards/figure bg */
+  --page: #ffffff;      /* page background */
 }
 
 /* ============ Layout helpers ============ */
@@ -14,7 +24,7 @@ body {
   font-family: Inter, Roboto, Ubuntu, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   line-height: 1.5;
   color: var(--ink);
-  background: #fff;
+  background: var(--page);
   min-height: 100svh;
   display: grid;                /* ✅ Grid usage */
   grid-template-rows: auto 1fr auto;
@@ -22,8 +32,8 @@ body {
 
 /* ============ Header (mobile) ============ */
 header {
-  background: #f7f9fb;
-  border-bottom: 1px solid #e5edf3;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
   padding-inline: 0.75rem;
   display: grid;
   grid-template-columns: 1fr auto 1fr; /* empty | title | button */
@@ -36,7 +46,7 @@ header {
   display: inline-block;
   font-weight: 800;
   font-size: 1.125rem;
-  color: #0b2540;
+  color: var(--title);
   padding-block: 0.75rem;
 }
 
@@ -66,7 +76,7 @@ header {
   display: block;
   inline-size: 22px;
   block-size: 2px;
-  background: #0b2540;
+  background: var(--title);
   border-radius: 2px;
   transition: transform 200ms ease, opacity 200ms ease;
 }
@@ -82,8 +92,8 @@ header {
 /* ============ Nav (mobile default) ============ */
 .nav {
   grid-column: 1 / -1;
-  background: #ffffff;
-  border-top: 1px solid #e5edf3;
+  background: var(--fg);
+  border-top: 1px solid var(--line);
   display: none;                /* hidden by default on mobile */
 }
 .nav[data-state="open"] { display: block; }
@@ -98,14 +108,14 @@ header {
   display: block;
   padding: 0.75rem 0.5rem;
   border-radius: 0.5rem;
-  color: #0b2540;
+  color: var(--title);
   text-decoration: none;
   font-weight: 600;
 }
-.nav a:hover { background: #f1f5f9; }
+.nav a:hover { background: var(--hover); }
 .nav a[aria-current="page"] { color: var(--bg); }
 
-
+/* ============ Main ============ */
 main { padding: 1rem; }
 main > h1 {
   font-size: 1.35rem;
@@ -115,13 +125,13 @@ main > h1 {
 .gallery {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: 1fr;   
+  grid-template-columns: 1fr;
 }
 figure {
-  border: 1px solid #e5edf3;
+  border: 1px solid var(--line);
   border-radius: 0.75rem;
   overflow: hidden;
-  background: #fff;
+  background: var(--card);
 }
 figure img {
   display: block;
@@ -134,18 +144,18 @@ figcaption {
   font-size: 0.95rem;
 }
 
-
+/* ============ Footer ============ */
 footer {
-  border-top: 1px solid #e5edf3;
+  border-top: 1px solid var(--line);
   padding: 1rem;
   font-size: 0.95rem;
-  color: #0b2540;
+  color: var(--title);
   text-align: center;
   line-height: 1.4;
 }
 footer p { margin: 0.25rem 0; }
 
-
+/* ============ A11y ============ */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
