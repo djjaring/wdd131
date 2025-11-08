@@ -1,6 +1,7 @@
 /* Header becomes a single row; show menu inline; hide hamburger */
 header {
-  grid-template-columns: auto 1fr; /* title | nav */
+  /* title | nav (in large view the nav sits where the button was) */
+  grid-template-columns: auto 1fr;
   align-items: stretch;
 }
 

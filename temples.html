@@ -4,39 +4,47 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Temple Album</title>
+
+  <!-- Required meta -->
+  <meta name="author" content="Dan Jay Jaring" />
   <meta name="description" content="A mobile-first gallery of Latter-day Saint temples with captions, built for WDD 131 coursework." />
-  <!-- Mobile-first CSS order -->
-  <link rel="stylesheet" href="temples.css" />
-  <link rel="stylesheet" href="temples-large.css" media="(min-width: 768px)" />
-  <!-- Defer JS -->
-  <script src="temples.js" defer></script>
+
+  <!-- Google Fonts (no @import, with preconnects) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&family=Roboto:wght@400;600;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Mobile-first CSS order (correct paths) -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)" />
+
+  <!-- Defer JS (correct path) -->
+  <script src="scripts/temples.js" defer></script>
 </head>
 <body>
   <header>
-  <span class="site-title">Temple Album</span>
+    <span class="site-title">Temple Album</span>
 
-  <!-- Hamburger button -->
-  <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
-    <!-- Accessible icon (three lines) -->
-    <span aria-hidden="true" class="menu-icon"></span>
-  </button>
+    <!-- Hamburger button -->
+    <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+      <span aria-hidden="true" class="menu-icon"></span>
+    </button>
 
-  <!-- Primary navigation -->
-  <nav id="primary-nav" class="nav" data-state="closed">
-    <ul>
-      <li><a href="#" aria-current="page">Home</a></li>
-      <li><a href="#">Old</a></li>
-      <li><a href="#">New</a></li>
-      <li><a href="#">Large</a></li>
-      <li><a href="#">Small</a></li>
-    </ul>
-  </nav>
- </header>
+    <!-- Primary navigation -->
+    <nav id="primary-nav" class="nav" data-state="closed">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <h1>Temple Album</h1>
 
-    <!-- You may use a single placeholder image at this stage -->
     <section class="gallery">
       <figure>
         <img src="images/gilbert-arizona-temple.jpg" alt="Salt Lake Temple exterior" width="400" height="267" loading="lazy">

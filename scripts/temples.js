@@ -22,6 +22,9 @@ if (toggle && nav) {
   });
 }
 
-// Footer JS you likely already plan to add
-document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+// Footer JS
+const yearEl = document.getElementById('currentyear');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+const modEl = document.getElementById('lastModified');
+if (modEl) modEl.textContent = `Last Modified: ${document.lastModified}`;
