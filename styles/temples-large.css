@@ -1,36 +1,39 @@
-/* Header becomes a single row; show menu inline; hide hamburger */
-header {
-  /* title | nav (in large view the nav sits where the button was) */
-  grid-template-columns: auto 1fr;
-  align-items: stretch;
+/* Large screens: wrap everything to avoid top-level duplicates */
+@media (min-width: 768px) {
+  /* Header becomes title | nav; hide hamburger; show horizontal nav */
+  header {
+    grid-template-columns: auto 1fr;
+    align-items: stretch;
+  }
+
+  .menu-toggle { display: none; }
+
+  .nav {
+    display: block;    /* visible at large screens */
+    border-top: none;
+    align-self: stretch;
+  }
+  .nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .nav a {
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Gallery: 2 columns */
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
 }
 
-.menu-toggle { display: none; }
-
-/* Nav always visible and horizontal */
-.nav {
-  display: block !important;      /* ensure it's visible on large screens */
-  border-top: none;
-  align-self: stretch;
-}
-.nav ul {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  justify-content: flex-end;
-  padding: 0;
-}
-.nav a {
-  padding: 0.75rem 0.9rem;
-  border-radius: 0.5rem;
-}
-
-/* Gallery: 2–3 columns */
-.gallery {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
+/* XL screens */
 @media (min-width: 1024px) {
   .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   main > h1 { font-size: 1.75rem; }

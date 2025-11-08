@@ -16,7 +16,7 @@ body {
   color: var(--ink);
   background: #fff;
   min-height: 100svh;
-  display: grid;                /* ✅ uses CSS Grid at least once */
+  display: grid;                /* ✅ Grid usage */
   grid-template-rows: auto 1fr auto;
 }
 
@@ -25,16 +25,13 @@ header {
   background: #f7f9fb;
   border-bottom: 1px solid #e5edf3;
   padding-inline: 0.75rem;
-
-  /* three columns: empty | title | button (keeps title truly centered) */
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr; /* empty | title | button */
   align-items: center;
   gap: 0.25rem;
 }
-
 .site-title {
-  grid-column: 2;               /* center column */
+  grid-column: 2;
   justify-self: center;
   display: inline-block;
   font-weight: 800;
@@ -45,7 +42,7 @@ header {
 
 /* Hamburger button */
 .menu-toggle {
-  grid-column: 3;               /* right side */
+  grid-column: 3;
   -webkit-tap-highlight-color: transparent;
   appearance: none;
   border: none;
@@ -61,7 +58,7 @@ header {
   outline-offset: 2px;
 }
 
-/* The icon (3 bars) */
+/* Icon (3 bars) */
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after {
@@ -77,20 +74,19 @@ header {
 .menu-icon::before { position: absolute; transform: translateY(-6px); }
 .menu-icon::after  { position: absolute; transform: translateY(6px); }
 
-/* X state when expanded */
+/* "X" when open */
 .menu-toggle[aria-expanded="true"] .menu-icon { background: transparent; }
 .menu-toggle[aria-expanded="true"] .menu-icon::before { transform: rotate(45deg); }
 .menu-toggle[aria-expanded="true"] .menu-icon::after  { transform: rotate(-45deg); }
 
-/* ============ Nav (mobile collapsed by default) ============ */
+/* ============ Nav (mobile default) ============ */
 .nav {
-  grid-column: 1 / -1;          /* push nav below header row on mobile */
+  grid-column: 1 / -1;
   background: #ffffff;
   border-top: 1px solid #e5edf3;
-  display: none;                 /* hidden by default on mobile */
+  display: none;                /* hidden by default on mobile */
 }
 .nav[data-state="open"] { display: block; }
-
 .nav ul {
   list-style: none;
   margin: 0;
@@ -114,13 +110,12 @@ main { padding: 1rem; }
 main > h1 {
   font-size: 1.35rem;
   margin: 0 0 0.75rem;
-  text-align: center;           /* center main title */
+  text-align: center;
 }
-
 .gallery {
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: 1fr;   /* one-up on small screens */
+  grid-template-columns: 1fr;   /* one column on small screens */
 }
 figure {
   border: 1px solid #e5edf3;
@@ -139,17 +134,16 @@ figcaption {
   font-size: 0.95rem;
 }
 
-/* ============ Footer ============ */
+/* ============ Footer (centered) ============ */
 footer {
   border-top: 1px solid #e5edf3;
   padding: 1rem;
   font-size: 0.95rem;
   color: #0b2540;
-  text-align: center;   /* ✅ Centers all footer text */
-  display: grid;
-  place-items: center;  /* ✅ Keeps content centered horizontally & vertically */
+  text-align: center;
   line-height: 1.4;
 }
+footer p { margin: 0.25rem 0; }
 
 /* ============ Reduced motion ============ */
 @media (prefers-reduced-motion: reduce) {
