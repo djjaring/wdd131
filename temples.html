@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+  <meta name="description" content="A mobile-first gallery of Latter-day Saint temples with captions, built for WDD 131 coursework." />
+  <!-- Mobile-first CSS order -->
+  <link rel="stylesheet" href="temples.css" />
+  <link rel="stylesheet" href="temples-large.css" media="(min-width: 768px)" />
+  <!-- Defer JS -->
+  <script src="temples.js" defer></script>
+</head>
+<body>
+  <header>
+  <span class="site-title">Temple Album</span>
+
+  <!-- Hamburger button -->
+  <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+    <!-- Accessible icon (three lines) -->
+    <span aria-hidden="true" class="menu-icon"></span>
+  </button>
+
+  <!-- Primary navigation -->
+  <nav id="primary-nav" class="nav" data-state="closed">
+    <ul>
+      <li><a href="#" aria-current="page">Home</a></li>
+      <li><a href="#">Old</a></li>
+      <li><a href="#">New</a></li>
+      <li><a href="#">Large</a></li>
+      <li><a href="#">Small</a></li>
+    </ul>
+  </nav>
+ </header>
+
+  <main>
+    <h1>Temple Album</h1>
+
+    <!-- You may use a single placeholder image at this stage -->
+    <section class="gallery">
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Salt Lake Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Rome Italy Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Cebu City Philippines Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Cebu City Philippines Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Manila Philippines Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Manila Philippines Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Paris France Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Paris France Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Nauvoo Illinois Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Nauvoo Illinois Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Laie Hawaii Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Provo City Center Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Provo City Center Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/gilbert-arizona-temple.jpg" alt="Washington D.C. Temple exterior" width="400" height="267" loading="lazy">
+        <figcaption>Washington D.C. Temple</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Dan Jay Jaring • Florida, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
