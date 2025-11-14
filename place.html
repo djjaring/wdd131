@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Manila, Philippines</title>
+  <meta name="description" content="Country page about Manila, Philippines including culture, quick facts, and current weather conditions." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <h1>Manila, Philippines</h1>
+      <p class="tagline">Pearl of the Orient • City by the Bay</p>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#facts">Facts</a>
+      <a href="#weather">Weather</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION WITH SLIDER ========== -->
+    <section class="hero">
+      <!-- Slider (left on large screens) -->
+      <div class="hero-slider">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+          <picture>
+            <source srcset="images/slide1-large.webp" media="(min-width: 64rem)" type="image/webp">
+            <source srcset="images/slide1-medium.webp" media="(min-width: 37.5rem)" type="image/webp">
+            <img src="images/sunset.webp" alt="Sunset over Manila Bay with colorful sky and city skyline.">
+          </picture>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <picture>
+            <source srcset="images/slide2-large.webp" media="(min-width: 64rem)" type="image/webp">
+            <source srcset="images/slide2-medium.webp" media="(min-width: 37.5rem)" type="image/webp">
+            <img src="images/intramuros.webp" alt="Historic Intramuros stone walls and old buildings.">
+          </picture>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <picture>
+            <source srcset="images/slide3-large.webp" media="(min-width: 64rem)" type="image/webp">
+            <source srcset="images/slide3-medium.webp" media="(min-width: 37.5rem)" type="image/webp">
+            <img src="images/jeepney.webp" alt="Busy Manila street with jeepneys and city life.">
+          </picture>
+        </div>
+
+        <!-- Navigation arrows -->
+        <button class="prev" aria-label="Previous slide">&#10094;</button>
+        <button class="next" aria-label="Next slide">&#10095;</button>
+      </div>
+
+      <!-- Hero text (right on large screens) -->
+      <div class="hero-text">
+        <h2>Discover Manila</h2>
+        <p>
+          Manila is a vibrant coastal capital city known for its historic Intramuros,
+          colorful jeepneys, delicious street food, and breathtaking sunsets over Manila Bay.
+        </p>
+        <p>
+          It blends Spanish colonial heritage, modern skyscrapers, and the warm hospitality
+          of the Filipino people.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== CONTENT GRID ========== -->
+    <section class="content-grid">
+      <!-- ABOUT CARD -->
+      <section class="card" id="about">
+        <h2>About Manila</h2>
+        <p>
+          Manila is the capital of the Philippines, located on the eastern shore of Manila Bay.
+          It is part of the National Capital Region (NCR) and serves as the country's economic,
+          political, and cultural hub.
+        </p>
+        <p>
+          Visitors can explore historic sites like Intramuros and Rizal Park, shop in massive
+          malls, and enjoy local favorites like halo-halo and taho.
+        </p>
+      </section>
+
+      <!-- FACTS CARD -->
+      <section class="card" id="facts">
+        <h2>Quick Facts</h2>
+        <ul class="facts-list">
+          <li><span class="label">Country:</span> Philippines</li>
+          <li><span class="label">Region:</span> National Capital Region (NCR)</li>
+          <li><span class="label">Population:</span> ~1.9 million (city proper)</li>
+          <li><span class="label">Languages:</span> Filipino, English</li>
+          <li><span class="label">Currency:</span> Philippine Peso (PHP)</li>
+          <li><span class="label">Time Zone:</span> GMT+8 (PST)</li>
+        </ul>
+      </section>
+
+      <!-- WEATHER CARD -->
+      <section class="card weather-card" id="weather">
+        <div class="weather-header">
+          <h2 id="weather-heading">Weather</h2>
+          <!-- Mobile SVG icon; hidden on larger screens where pseudo-element is used -->
+          <img 
+            src="images/weather-sun.svg" 
+            alt="Sunny weather icon"
+            class="weather-icon-mobile"
+          />
+        </div>
+
+        <p>
+          <span class="label">Condition:</span>
+          Mostly sunny with a light breeze.
+        </p>
+        <p>
+          <span class="label">Current Temp:</span>
+          <span id="current-temp">82</span> °F
+        </p>
+        <p>
+          <span class="label">Wind Speed:</span>
+          <span id="current-wind">8</span> mph
+        </p>
+        <p>
+          <span class="label">Wind Chill:</span>
+          <span id="windchill">N/A</span>
+        </p>
+        <p class="weather-note">
+          Tropical climates rarely experience true wind chill, but this page is ready
+          for the calculation when conditions apply.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> | Dan Jay Jaring | Jacksonville, Florida
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
