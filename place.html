@@ -27,23 +27,41 @@
 
   <main>
 
-    <!-- ========== HERO SECTION (Slider) ========== -->
+    <!-- ========== HERO SECTION (Slider with srcset) ========== -->
     <section class="hero">
       <div class="hero-slider">
 
         <!-- Slide 1 -->
         <div class="slide current">
-          <img src="images/sunset.webp" alt="Sunset over Manila Bay with colorful sky and city skyline.">
+          <img 
+            src="images/sunset.webp"
+            srcset="
+              images/sunset.webp 600w,
+              images/sunset.webp 1200w"
+            sizes="(min-width: 64rem) 1200px, 600px"
+            alt="Sunset over Manila Bay with colorful sky and city skyline.">
         </div>
 
         <!-- Slide 2 -->
         <div class="slide">
-          <img src="images/intramuros.webp" alt="Historic Intramuros stone walls and old buildings.">
+          <img 
+            src="images/intramuros.webp"
+            srcset="
+              images/intramuros.webp 600w,
+              images/intramuros.webp 1200w"
+            sizes="(min-width: 64rem) 1200px, 600px"
+            alt="Historic Intramuros stone walls and old buildings.">
         </div>
 
         <!-- Slide 3 -->
         <div class="slide">
-          <img src="images/jeepney.webp" alt="Busy Manila street with jeepneys and city life.">
+          <img 
+            src="images/jeepney.webp"
+            srcset="
+              images/jeepney.webp 600w,
+              images/jeepney.webp 1200w"
+            sizes="(min-width: 64rem) 1200px, 600px"
+            alt="Busy Manila street with jeepneys and city life.">
         </div>
 
         <!-- Navigation Buttons -->
