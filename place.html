@@ -27,47 +27,34 @@
 
   <main>
 
-    <!-- ========== HERO SECTION (Slider with srcset) ========== -->
+    <!-- ========== HERO SECTION (Slider) ========== -->
     <section class="hero">
       <div class="hero-slider">
 
         <!-- Slide 1 -->
-        <div class="slide current">
-          <img 
-            src="images/sunset.webp"
-            srcset="
-              images/sunset.webp 600w,
-              images/sunset.webp 1200w"
-            sizes="(min-width: 64rem) 1200px, 600px"
-            alt="Sunset over Manila Bay with colorful sky and city skyline.">
+        <div class="slide">
+          <picture>
+            <img src="images/sunset.webp" alt="Sunset over Manila Bay">
+          </picture>
         </div>
 
         <!-- Slide 2 -->
         <div class="slide">
-          <img 
-            src="images/intramuros.webp"
-            srcset="
-              images/intramuros.webp 600w,
-              images/intramuros.webp 1200w"
-            sizes="(min-width: 64rem) 1200px, 600px"
-            alt="Historic Intramuros stone walls and old buildings.">
+          <picture>
+            <img src="images/intramuros.webp" alt="Historic Intramuros in Manila">
+          </picture>
         </div>
 
         <!-- Slide 3 -->
         <div class="slide">
-          <img 
-            src="images/jeepney.webp"
-            srcset="
-              images/jeepney.webp 600w,
-              images/jeepney.webp 1200w"
-            sizes="(min-width: 64rem) 1200px, 600px"
-            alt="Busy Manila street with jeepneys and city life.">
+          <picture>
+            <img src="images/jeepney.webp" alt="Jeepneys in Manila">
+          </picture>
         </div>
 
         <!-- Navigation Buttons -->
         <button class="prev" aria-label="Previous Slide">&#10094;</button>
         <button class="next" aria-label="Next Slide">&#10095;</button>
-
       </div>
 
       <div class="hero-text">
@@ -112,7 +99,7 @@
       <section class="card weather-card" id="weather">
         <div class="weather-header">
           <h2 id="weather-heading">Weather</h2>
-          <img src="images/weather-sun.svg" alt="Sunny weather icon" class="weather-icon-mobile">
+          <img src="images/weather-sun.svg" alt="Sunny Icon" class="weather-icon-mobile">
         </div>
 
         <p><span class="label">Condition:</span> Mostly sunny</p>
