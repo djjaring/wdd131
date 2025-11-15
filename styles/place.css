@@ -55,7 +55,7 @@ img {
 }
 
 .branding .tagline {
-  margin: 0.1rem 0 0;
+  margin: 0.15rem 0 0;
   font-size: 0.9rem;
   color: var(--accent-soft);
 }
@@ -90,31 +90,42 @@ main {
 
 /* ========== HERO SECTION ========== */
 .hero {
-  background-color: #000;
   border-radius: 1rem;
   overflow: hidden;
   color: var(--fg);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
+  background: #000;
 }
 
-/* HERO SLIDER */
+/* Slider container */
 .hero-slider {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
+/* Slides */
+.slide {
+  display: none;
+}
+
+/* ✅ Show first slide even if JS fails */
+.slide:first-child {
+  display: block;
+}
+
+/* Images all same size */
 .hero-slider picture img {
   width: 100%;
   height: 15rem;
   object-fit: cover;
 }
 
-/* Individual slides */
-.slide {
-  display: none;
+@media (min-width: 48rem) {
+  .hero-slider picture img {
+    height: 22rem;
+  }
 }
 
 /* Arrows */
@@ -122,23 +133,17 @@ main {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   padding: 0.3rem 0.7rem;
   color: #ffffff;
   font-size: 2rem;
   font-weight: bold;
   border: none;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
   user-select: none;
   transition: background 0.25s ease, color 0.25s ease;
-}
-
-.prev:hover,
-.next:hover {
-  background: rgba(0, 0, 0, 0.5);
-  color: var(--accent);
 }
 
 .prev {
@@ -149,10 +154,16 @@ main {
   right: 0.75rem;
 }
 
-/* HERO TEXT */
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--accent);
+}
+
+/* Hero text */
 .hero-text {
   padding: 1rem 1.1rem 1.5rem;
-  background: linear-gradient(135deg, rgba(11, 79, 108, 0.95), rgba(11, 79, 108, 0.85));
+  background: linear-gradient(135deg, rgba(11, 79, 108, 0.96), rgba(11, 79, 108, 0.85));
 }
 
 .hero-text h2 {
@@ -265,12 +276,9 @@ footer p {
     font-size: 1.8rem;
   }
 
+  /* Hero becomes two-column: slider | text */
   .hero {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  }
-
-  .hero-slider picture img {
-    height: 100%;
   }
 
   .hero-text {
@@ -279,6 +287,7 @@ footer p {
     justify-content: center;
   }
 
+  /* Content grid with 3 columns like wireframe */
   .content-grid {
     grid-template-columns: 2fr 1.5fr 1.5fr;
   }

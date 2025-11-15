@@ -3,17 +3,19 @@ const yearSpan = document.querySelector("#currentyear");
 const lastModifiedP = document.querySelector("#lastModified");
 
 const today = new Date();
+
 if (yearSpan) {
   yearSpan.textContent = today.getFullYear();
 }
+
 if (lastModifiedP) {
   lastModifiedP.textContent = `Last Modified: ${document.lastModified}`;
 }
 
 // ========== Wind Chill Calculation ==========
 // Static values – keep these matching the HTML content
-const temperatureF = 82; // same as #current-temp
-const windSpeedMph = 8; // same as #current-wind
+const temperatureF = 82;  // same as #current-temp
+const windSpeedMph = 8;   // same as #current-wind
 
 const windChillSpan = document.querySelector("#windchill");
 
@@ -54,7 +56,7 @@ let slideTimer = null;
 function showSlide(index) {
   if (!slides.length) return;
 
-  // Normalize index (wrap around)
+  // Wrap index
   if (index >= slides.length) index = 0;
   if (index < 0) index = slides.length - 1;
   slideIndex = index;
@@ -81,7 +83,7 @@ function resetSlideShow() {
   startSlideShow();
 }
 
-// Init slider when DOM is ready (script is deferred, so DOM is ready here)
+// Initialize slider (script is deferred, DOM is ready)
 if (slides.length > 0) {
   showSlide(slideIndex);
   startSlideShow();
