@@ -1,4 +1,4 @@
-// ========== Footer: current year & last modified ==========
+
 const yearSpan = document.querySelector("#currentyear");
 const lastModifiedP = document.querySelector("#lastModified");
 
@@ -12,18 +12,13 @@ if (lastModifiedP) {
   lastModifiedP.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-// ========== Wind Chill Calculation ==========
-// Static values – keep these matching the HTML content
-const temperatureF = 82;  // same as #current-temp
-const windSpeedMph = 8;   // same as #current-wind
+
+const temperatureF = 82;  
+const windSpeedMph = 8;   
 
 const windChillSpan = document.querySelector("#windchill");
 
-/**
- * calculateWindChill
- * Uses the standard US National Weather Service formula for °F / mph.
- * Returns a string with one decimal place.
- */
+
 function calculateWindChill(tempF, speedMph) {
   return (
     35.74 +
@@ -33,8 +28,7 @@ function calculateWindChill(tempF, speedMph) {
   ).toFixed(1);
 }
 
-// Only calculate wind chill if:
-// temp <= 50°F AND wind speed > 3 mph
+
 if (windChillSpan) {
   if (temperatureF <= 50 && windSpeedMph > 3) {
     const chill = calculateWindChill(temperatureF, windSpeedMph);
@@ -44,7 +38,7 @@ if (windChillSpan) {
   }
 }
 
-// ========== HERO IMAGE SLIDER ==========
+
 
 const slides = document.querySelectorAll(".slide");
 const prevBtn = document.querySelector(".prev");
@@ -56,24 +50,24 @@ let slideTimer = null;
 function showSlide(index) {
   if (!slides.length) return;
 
-  // Wrap index
+  
   if (index >= slides.length) index = 0;
   if (index < 0) index = slides.length - 1;
   slideIndex = index;
 
-  // Hide all slides
+  
   slides.forEach(slide => {
     slide.style.display = "none";
   });
 
-  // Show current slide
+  
   slides[slideIndex].style.display = "block";
 }
 
 function startSlideShow() {
   slideTimer = setInterval(() => {
     showSlide(slideIndex + 1);
-  }, 4000); // 4 seconds
+  }, 4000); 
 }
 
 function resetSlideShow() {
@@ -83,7 +77,7 @@ function resetSlideShow() {
   startSlideShow();
 }
 
-// Initialize slider (script is deferred, DOM is ready)
+
 if (slides.length > 0) {
   showSlide(slideIndex);
   startSlideShow();

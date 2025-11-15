@@ -1,4 +1,4 @@
-/* ========== Reset & tokens ========== */
+
 *,
 *::before,
 *::after {
@@ -12,8 +12,8 @@ body {
 }
 
 :root {
-  --bg: #0b4f6c;        /* deep blue */
-  --accent: #ffd166;    /* warm yellow */
+  --bg: #0b4f6c;        
+  --accent: #ffd166;    
   --accent-soft: #ffe9a8;
   --fg: #ffffff;
   --ink: #111827;
@@ -22,14 +22,14 @@ body {
   --border-subtle: #e5e7eb;
 }
 
-/* ========== Base styles ========== */
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   color: var(--ink);
   background-color: #ffffff;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* header | main | footer */
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
@@ -38,7 +38,7 @@ img {
   display: block;
 }
 
-/* ========== Header ========== */
+
 .site-header {
   background-color: var(--bg);
   color: var(--fg);
@@ -80,7 +80,7 @@ img {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* ========== Main layout ========== */
+
 main {
   padding: 1.25rem 1rem 2.5rem;
   max-width: 64rem;
@@ -88,7 +88,7 @@ main {
   margin-inline: auto;
 }
 
-/* ========== HERO SECTION ========== */
+
 .hero {
   border-radius: 1rem;
   overflow: hidden;
@@ -98,24 +98,24 @@ main {
   background: #000;
 }
 
-/* Slider container */
+
 .hero-slider {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-/* Slides */
+
 .slide {
   display: none;
 }
 
-/* ✅ Show first slide even if JS fails */
+
 .slide:first-child {
   display: block;
 }
 
-/* Images all same size */
+
 .hero-slider picture img {
   width: 100%;
   height: 15rem;
@@ -128,7 +128,7 @@ main {
   }
 }
 
-/* Arrows */
+
 .prev,
 .next {
   cursor: pointer;
@@ -160,7 +160,7 @@ main {
   color: var(--accent);
 }
 
-/* Hero text */
+
 .hero-text {
   padding: 1rem 1.1rem 1.5rem;
   background: linear-gradient(135deg, rgba(11, 79, 108, 0.96), rgba(11, 79, 108, 0.85));
@@ -176,7 +176,7 @@ main {
   font-size: 0.95rem;
 }
 
-/* ========== CONTENT GRID ========== */
+
 .content-grid {
   margin-top: 1.5rem;
   display: grid;
@@ -202,7 +202,7 @@ main {
   margin: 0.3rem 0;
 }
 
-/* FACTS LIST */
+
 .facts-list {
   list-style: none;
   margin: 0;
@@ -219,13 +219,13 @@ main {
   border-bottom: none;
 }
 
-/* Label style */
+
 .label {
   font-weight: 600;
   color: var(--bg);
 }
 
-/* WEATHER CARD */
+
 .weather-card {
   background: linear-gradient(135deg, #e0f2fe, #f9fafb);
 }
@@ -251,7 +251,7 @@ main {
   color: var(--muted);
 }
 
-/* ========== Footer ========== */
+
 footer {
   background-color: #111827;
   color: var(--fg);
@@ -264,7 +264,7 @@ footer p {
   margin: 0.25rem 0;
 }
 
-/* ========== Larger view ========== */
+
 @media (min-width: 48rem) {
   .site-header {
     flex-direction: row;
@@ -276,7 +276,7 @@ footer p {
     font-size: 1.8rem;
   }
 
-  /* Hero becomes two-column: slider | text */
+  
   .hero {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   }
@@ -287,17 +287,17 @@ footer p {
     justify-content: center;
   }
 
-  /* Content grid with 3 columns like wireframe */
+  
   .content-grid {
     grid-template-columns: 2fr 1.5fr 1.5fr;
   }
 
-  /* Hide SVG icon in wider view, use pseudo-element instead */
+  
   .weather-icon-mobile {
     display: none;
   }
 
-  /* ✅ Pseudo-element weather icon after the heading in large view */
+  
   #weather-heading::after {
     content: " ⛅";
     font-size: 1.4rem;
