@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album – Filtered</title>
+
+  <meta name="author" content="Dan Jay Jaring" />
+  <meta name="description" content="A mobile-first gallery of Latter-day Saint temples with filtering options for old, new, large, and small temples." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&family=Roboto:wght@400;600;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS (copied/renamed from temples.css) -->
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)" />
+
+  <!-- JS (copied/renamed from temples.js) -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <span class="site-title">Temple Album</span>
+
+    <!-- Hamburger button -->
+    <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+      <span aria-hidden="true" class="menu-icon"></span>
+    </button>
+
+    <!-- NOTE: added data-filter attributes -->
+    <nav id="primary-nav" class="nav" data-state="closed">
+      <ul>
+        <li><a href="#" data-filter="home" aria-current="page">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temple Album</h1>
+
+    <!-- NO hard-coded figures here. JS will fill this. -->
+    <section class="gallery" id="temple-gallery">
+      <!-- Temple cards will be injected here by JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Dan Jay Jaring • Florida, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
