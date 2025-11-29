@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit a review for one of our products." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <h1>Product Review</h1>
+      <p class="tagline">Tell us what you think about your purchase.</p>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="form-card">
+      <h2>Review a Product</h2>
+      <!-- method="get" + action="review.html" per assignment -->
+      <form action="review.html" method="get" class="review-form">
+        <!-- Product Name -->
+        <div class="form-field">
+          <label for="productName">Product Name <span aria-hidden="true">*</span></label>
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- Options will be added dynamically by form.js -->
+          </select>
+        </div>
+
+        <!-- Overall Rating -->
+        <fieldset class="form-field">
+          <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+          <p class="hint">Choose a rating from 1 (lowest) to 5 (highest).</p>
+          <div class="rating-group">
+            <!-- All radios share the same name="rating" -->
+            <input type="radio" id="rate5" name="rating" value="5" required />
+            <label for="rate5" title="5 stars">★★★★★</label>
+
+            <input type="radio" id="rate4" name="rating" value="4" />
+            <label for="rate4" title="4 stars">★★★★☆</label>
+
+            <input type="radio" id="rate3" name="rating" value="3" />
+            <label for="rate3" title="3 stars">★★★☆☆</label>
+
+            <input type="radio" id="rate2" name="rating" value="2" />
+            <label for="rate2" title="2 stars">★★☆☆☆</label>
+
+            <input type="radio" id="rate1" name="rating" value="1" />
+            <label for="rate1" title="1 star">★☆☆☆☆</label>
+          </div>
+        </fieldset>
+
+        <!-- Date of Installation -->
+        <div class="form-field">
+          <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
+          <input type="date" id="installDate" name="installDate" required />
+        </div>
+
+        <!-- Useful Features (check all that apply) -->
+        <fieldset class="form-field">
+          <legend>Useful Features (check all that apply)</legend>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="featureDurability" name="features" value="Durability" />
+              <label for="featureDurability">Durability</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="featureEaseUse" name="features" value="Ease of Use" />
+              <label for="featureEaseUse">Ease of Use</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="featurePerformance" name="features" value="Performance" />
+              <label for="featurePerformance">Performance</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="featureDesign" name="features" value="Design" />
+              <label for="featureDesign">Design / Style</label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="featureValue" name="features" value="Value for Money" />
+              <label for="featureValue">Value for Money</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Written Review (optional) -->
+        <div class="form-field">
+          <label for="writtenReview">Written Review (optional)</label>
+          <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share more details about your experience..."></textarea>
+        </div>
+
+        <!-- User Name (optional) -->
+        <div class="form-field">
+          <label for="userName">Your Name (optional)</label>
+          <input type="text" id="userName" name="userName" placeholder="e.g., Dan J." />
+        </div>
+
+        <!-- Submit -->
+        <div class="form-actions">
+          <input type="submit" value="Submit Review" />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> | Dan Jay Jaring | WDD 131 – Product Review Form</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    // simple footer helper (you can reuse your existing getdates.js instead)
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

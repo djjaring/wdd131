@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Submitted</title>
+  <meta name="description" content="Thank you page for submitted product review." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <h1>Thank You!</h1>
+      <p class="tagline">Your review has been submitted.</p>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="form-card">
+      <h2>Review Confirmation</h2>
+
+      <p>Here is a summary of your review:</p>
+
+      <dl class="summary-list">
+        <div>
+          <dt>Product</dt>
+          <dd id="summaryProduct"></dd>
+        </div>
+        <div>
+          <dt>Rating</dt>
+          <dd id="summaryRating"></dd>
+        </div>
+        <div>
+          <dt>Date of Installation</dt>
+          <dd id="summaryInstallDate"></dd>
+        </div>
+        <div>
+          <dt>Useful Features</dt>
+          <dd id="summaryFeatures"></dd>
+        </div>
+        <div>
+          <dt>Written Review</dt>
+          <dd id="summaryWrittenReview"></dd>
+        </div>
+        <div>
+          <dt>Your Name</dt>
+          <dd id="summaryUserName"></dd>
+        </div>
+      </dl>
+
+      <p class="counter-text">
+        You have submitted <strong><span id="reviewCount">0</span></strong> review(s) from this browser.
+      </p>
+
+      <p class="next-step">
+        <a href="form.html" class="button-link">Submit Another Review</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> | Dan Jay Jaring | WDD 131 – Product Review Form</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    // simple footer helper (same as form.html)
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
