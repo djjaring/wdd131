@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Review Form</title>
-  <meta name="description" content="Submit a review for one of our products." />
+  <meta name="description" content="Submit a detailed review for one of our products, including your star rating, useful features, and optional written feedback about your experience." />
   <meta name="author" content="Dan Jay Jaring" />
 
   <link rel="stylesheet" href="styles/form.css" />
@@ -37,20 +37,20 @@
           <legend>Overall Rating <span aria-hidden="true">*</span></legend>
           <p class="hint">Choose a rating from 1 (lowest) to 5 (highest).</p>
           <div class="rating-group">
-            <!-- All radios share the same name="rating" -->
+            <!-- All radios share the same name="rating" and have required -->
             <input type="radio" id="rate5" name="rating" value="5" required />
             <label for="rate5" title="5 stars">★★★★★</label>
 
-            <input type="radio" id="rate4" name="rating" value="4" />
+            <input type="radio" id="rate4" name="rating" value="4" required />
             <label for="rate4" title="4 stars">★★★★☆</label>
 
-            <input type="radio" id="rate3" name="rating" value="3" />
+            <input type="radio" id="rate3" name="rating" value="3" required />
             <label for="rate3" title="3 stars">★★★☆☆</label>
 
-            <input type="radio" id="rate2" name="rating" value="2" />
+            <input type="radio" id="rate2" name="rating" value="2" required />
             <label for="rate2" title="2 stars">★★☆☆☆</label>
 
-            <input type="radio" id="rate1" name="rating" value="1" />
+            <input type="radio" id="rate1" name="rating" value="1" required />
             <label for="rate1" title="1 star">★☆☆☆☆</label>
           </div>
         </fieldset>
@@ -116,11 +116,5 @@
     <p>&copy; <span id="currentYear"></span> | Dan Jay Jaring | WDD 131 – Product Review Form</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
-
-  <script>
-    // simple footer helper (you can reuse your existing getdates.js instead)
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
 </body>
 </html>

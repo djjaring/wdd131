@@ -1,6 +1,6 @@
 // scripts/form.js
 
-// Example product array – replace with the one from the instructions if needed.
+// Example product array – from the assignment
 const products = [
   {
     id: "fc-1888",
@@ -25,15 +25,27 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Populate the product <select>
   const selectElement = document.querySelector("#productName");
 
-  if (!selectElement) return;
+  if (selectElement) {
+    products.forEach((product) => {
+      const option = document.createElement("option");
+      option.value = product.id;          // value = product id (per assignment)
+      option.textContent = product.name;  // visible text
+      selectElement.appendChild(option);
+    });
+  }
 
-  // For each product: use "name" for display and "id" for value
-  products.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;      // value = product id (per assignment JS section)
-    option.textContent = product.name; // visible text
-    selectElement.appendChild(option);
-  });
+  // Footer: current year
+  const yearSpan = document.getElementById("currentYear");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Footer: last modified date
+  const modifiedSpan = document.getElementById("lastModified");
+  if (modifiedSpan) {
+    modifiedSpan.textContent = document.lastModified;
+  }
 });
