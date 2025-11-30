@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickleballeros Club – Gallery</title>
+  <meta name="description" content="Photo gallery of Pickleballeros Club pickleball games, players, and events." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
+</head>
+<body data-page="gallery">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <span class="logo-mark">PB</span>
+        <span class="logo-text">Pickleballeros Club</span>
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav id="mainNav" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+      <a href="join.html" class="nav-link">Join</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
+  </header>
+
+  <main class="site-main">
+    <section class="page-header section">
+      <h1>Pickleballeros Gallery</h1>
+      <p>
+        Hover over the images to zoom in and use the arrows to slide through some of our favorite
+        pickleball moments.
+      </p>
+    </section>
+
+    <!-- Slideshow -->
+    <section class="section">
+      <h2>Featured Slideshow</h2>
+      <div class="slider" aria-label="Featured Pickleball photos">
+        <button class="slider-btn prev" aria-label="Previous photo">&#10094;</button>
+
+        <figure class="slider-frame">
+          <img
+            id="sliderImage"
+            src="images/pb1.webp"
+            alt="Pickleballeros photo"
+            width="1024"
+            height="768"
+            class="hover-zoom"
+          />
+          <figcaption id="sliderCaption">Big serves, big smiles.</figcaption>
+        </figure>
+
+        <button class="slider-btn next" aria-label="Next photo">&#10095;</button>
+      </div>
+      <p class="slider-helper">
+        Tip: the slideshow advances automatically, and you can pause it by hovering over the image.
+      </p>
+    </section>
+
+    <!-- Filters + hover gallery -->
+    <section class="section">
+      <div class="section-header">
+        <h2>All Game Photos</h2>
+        <p class="section-intro">
+          Use the filters to view action shots, family photos, or big group pictures from our
+          weekly games.
+        </p>
+      </div>
+
+      <div class="filter-row" role="tablist" aria-label="Photo filters">
+        <button class="filter-btn active" data-filter="all" role="tab">All</button>
+        <button class="filter-btn" data-filter="action" role="tab">Action</button>
+        <button class="filter-btn" data-filter="family" role="tab">Family &amp; Friends</button>
+        <button class="filter-btn" data-filter="group" role="tab">Group Shots</button>
+      </div>
+
+      <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Pickleballeros Club • Jacksonville, Florida</p>
+    <p><small>Photos used with permission from club members.</small></p>
+  </footer>
+</body>
+</html>

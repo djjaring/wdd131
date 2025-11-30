@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickleballeros Club – Join</title>
+  <meta name="description" content="Join Pickleballeros Club to enjoy weekly pickleball games, lessons, and tournaments in Jacksonville." />
+  <meta name="author" content="Dan Jay Jaring" />
+
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
+</head>
+<body data-page="join">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <span class="logo-mark">PB</span>
+        <span class="logo-text">Pickleballeros Club</span>
+      </a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav id="mainNav" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="join.html" class="nav-link active">Join</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
+  </header>
+
+  <main class="site-main">
+    <section class="page-header section">
+      <h1>Join Pickleballeros Club</h1>
+      <p>
+        Tell us a little about yourself so we can connect you with the right games and share
+        schedule updates. All information stays within the club.
+      </p>
+    </section>
+
+    <section class="section form-wrapper">
+      <form id="joinForm" novalidate>
+        <fieldset>
+          <legend>Member Information</legend>
+
+          <label for="name">Full Name<span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+
+          <label for="email">Email Address<span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+
+          <label for="phone">Mobile Number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Optional" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Play Details</legend>
+
+          <label for="level">Current Skill Level<span aria-hidden="true">*</span></label>
+          <select id="level" name="level" required>
+            <option value="">Select one...</option>
+            <option value="beginner">Beginner – learning basics</option>
+            <option value="intermediate">Intermediate – regular player</option>
+            <option value="advanced">Advanced – tournament ready</option>
+          </select>
+
+          <p class="field-label">Preferred Nights to Play</p>
+          <div class="checkbox-row">
+            <label><input type="checkbox" name="nights" value="Tuesday" /> Tuesday</label>
+            <label><input type="checkbox" name="nights" value="Thursday" /> Thursday</label>
+            <label><input type="checkbox" name="nights" value="Friday" /> Friday</label>
+            <label><input type="checkbox" name="nights" value="Saturday" /> Saturday</label>
+          </div>
+
+          <label for="goals">What are your pickleball goals?</label>
+          <textarea
+            id="goals"
+            name="goals"
+            rows="3"
+            placeholder="Example: get exercise, meet friends, learn dinks and drops, or play in tournaments."
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Updates</legend>
+          <label class="inline">
+            <input type="radio" name="newsletter" value="yes" checked />
+            Yes, send me club announcements and schedule changes.
+          </label>
+          <label class="inline">
+            <input type="radio" name="newsletter" value="no" />
+            No, I will check the group chat instead.
+          </label>
+        </fieldset>
+
+        <button type="submit" class="btn primary">Submit Membership</button>
+        <p class="form-helper"><span aria-hidden="true">*</span> Required fields</p>
+      </form>
+
+      <section id="joinMessage" class="join-message" aria-live="polite" hidden></section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Pickleballeros Club • Jacksonville, Florida</p>
+    <p><small>Photos used with permission from club members.</small></p>
+  </footer>
+</body>
+</html>

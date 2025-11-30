@@ -2,86 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>WDD 131 Dynamic Web Fundamentals | Dan Jay Jaring</title>
-
-  
-  <meta name="description" content="Course homepage for WDD 131  Dynamic Web Fundamentals by Dan Jay Jaring. Includes profile, hometown info, and quick links for students." />
-
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickleballeros Club – Home</title>
+  <meta name="description" content="Pickleballeros Club in Jacksonville, Florida. Join fun, friendly Filipino pickleball games, lessons, and tournaments." />
   <meta name="author" content="Dan Jay Jaring" />
 
- 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Roboto:wght@300..900&family=Ubuntu&display=swap" rel="stylesheet" />
-
-  
-  <link rel="stylesheet" href="styles/base.css" />
-
-  
-  <script src="scripts/getdates.js" defer></script>
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
-    <h3><span id="course-title">WDD 131 Dynamic Web Fundamentals — DAN JAY JARING</span></h3>
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <span class="logo-mark">PB</span>
+        <span class="logo-text">Pickleballeros Club</span>
+      </a>
+    </div>
 
-    <nav class="navbar" aria-label="Primary">
-      <a class="logo" href="/">Dan Jay</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      ☰
+    </button>
 
-      <button
-        class="hamburger"
-        aria-label="Toggle menu"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
-        <span></span><span></span><span></span>
-      </button>
-
-      <ul id="primary-navigation" class="nav-links">
-        <li><a href="https://www.linkedin.com/in/danjayjaring" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener">Favorite Scripture</a></li>
-        <li><a href="#" aria-current="page">Final Project</a></li>
-      </ul>
+    <nav id="mainNav" class="site-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="join.html" class="nav-link">Join</a>
     </nav>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
   </header>
 
   <main>
-    
-    <h1 class="page-title">WELCOME TO MY PAGE</h1>
-
-    <section class="card">
-      <h2>About Me</h2>
-      
-      <img src="images/profile.jpg" alt="Photo of Dan Jay Jaring" width="400" height="350" />
-      <p>Hello! My name is Dan Jay Jaring, and I'm a software development student at BYU–Idaho. I enjoy learning web fundamentals, playing pickleball, and exploring creative tech projects. This section introduces who I am and my goals for WDD 131.</p>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Play, Laugh, Compete.</h1>
+        <p>
+          Pickleballeros Club is a friendly Filipino-American pickleball community in Jacksonville, Florida.
+          We welcome all ages and skill levels—come sweat, smile, and make new friends.
+        </p>
+        <div class="hero-actions">
+          <a href="join.html" class="btn primary">Join the Club</a>
+          <a href="gallery.html" class="btn ghost">View Game Photos</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img
+          src="images/pb1.webp"
+          alt="Player serving during a night pickleball game"
+          width="1024"
+          height="768"
+          class="hover-zoom"
+        />
+        <figcaption>
+          Weeknight open play under the lights where new players learn how to serve, keep score,
+          and move safely on the court while experienced players practice fast drives, drops,
+          and third-shot strategies.
+        </figcaption>
+      </figure>
     </section>
 
-    <section class="card">
-      <h2>My Hometown</h2>
-      
-      <img src="images/jax.jpg" alt="Jacksonville, Florida skyline" width="400" height="350" />
-      <p>I currently live in Jacksonville, Florida — a beautiful city known for its beaches, parks, and great weather. I enjoy spending time outdoors, taking photos, and meeting friends to play pickleball.</p>
+    <section class="section">
+      <h2>Why Pickleballeros?</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Beginner Friendly</h3>
+          <p>
+            Never played before? We love teaching new players and helping you feel confident on the court.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Family Atmosphere</h3>
+          <p>
+            Bring your family and friends. We play, cheer, and support each other like one big barkada.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Competitive Fun</h3>
+          <p>
+            For experienced players we offer ladders, mini-tournaments, and challenge courts.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <h2>Weekly Schedule</h2>
+      <p class="section-intro">
+        We usually meet at local courts in Jacksonville. Times may change with weather and events, so
+        join the club chat once you sign up.
+      </p>
+
+      <ul id="eventList" class="event-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="section">
+      <h2>Club Highlights</h2>
+      <div class="highlight">
+        <figure class="highlight-photo">
+          <img
+            src="images/pb2.webp"
+            alt="Large Pickleballeros Club group photo at the courts"
+            width="1024"
+            height="768"
+            loading="lazy"
+            class="hover-zoom"
+          />
+          <figcaption>
+            Our growing pickleball family in Jacksonville gathers for drills, open play, and friendly
+            mini-tournaments. Between games we share tips on footwork, paddle grip, and strategy so
+            everyone can improve while still keeping the games relaxed and fun.
+          </figcaption>
+        </figure>
+        <div class="highlight-text">
+          <p>
+            What started as a few friends playing after work has grown into a lively group of
+            players from different wards, stakes, and neighborhoods.
+          </p>
+          <p>
+            Whether you are practicing dinks, drives, or third-shot drops, you will find a partner,
+            a coach, and a cheering section here.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> | Dan Jay Jaring | Jacksonville, Florida</p>
-    <p id="lastModified"></p>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Pickleballeros Club • Jacksonville, Florida</p>
+    <p><small>Photos used with permission from club members.</small></p>
   </footer>
-
-  <script>
-    
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.getElementById("primary-navigation");
-
-    hamburger.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      hamburger.classList.toggle("active", isOpen);
-      hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-  </script>
 </body>
 </html>
