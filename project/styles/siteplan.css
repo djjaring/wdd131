@@ -1,0 +1,141 @@
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fb; /* matches Background Color */
+  color: #1f2937;
+}
+
+/* ===== Layout ===== */
+header {
+  background-color: #0b4f6c; /* Primary color */
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+main {
+  max-width: 900px;
+  margin: 1.5rem auto 2rem;
+  padding: 1.5rem 1.25rem 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+section + section {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+h2, h3 {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+h2 {
+  color: #0b4f6c;
+  margin-bottom: 0.35rem;
+}
+
+h3 {
+  color: #1f2937;
+  margin-top: 1rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+/* ===== Color Schema Swatches ===== */
+.color-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.color-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.color-swatch {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+}
+
+.color-primary {
+  background-color: #0b4f6c;
+}
+
+.color-accent {
+  background-color: #ffd166;
+}
+
+.color-bg {
+  background-color: #f7f9fb;
+}
+
+.color-ink {
+  background-color: #1f2937;
+}
+
+/* ===== Typography Demo ===== */
+.font-heading {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ===== Wireframe Images ===== */
+figure {
+  margin: 1rem 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
